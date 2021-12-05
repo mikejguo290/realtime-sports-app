@@ -6,8 +6,12 @@ export default function Table(){
     const socket = useContext(SocketContext);
     
     const [ players, setPlayers ] = useState([]);
-    const handleUpdate=(playerData)=>{ // listener function
-        console.log(playerData);
+    const handleUpdate=(data)=>{ // listener function
+        // clean the data before saving it to state
+        const playerData = {
+              ...data,
+              id:data.MSTID, // Data grid needs the unique id property to work 
+            }
         setPlayers((prevState)=>{
             return [...prevState,playerData]
         });
@@ -25,7 +29,7 @@ export default function Table(){
     
     return (
         <>
-            <DataGridCells data={players} />
+            <DataGridCells rows={players} />
         </>
     )   
 }
