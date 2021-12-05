@@ -1,12 +1,16 @@
-import React, { useContext, useEffect }from 'react';
+import React, { useContext, useEffect, useState }from 'react';
 import { SocketContext } from '../context/socket';
-
+import DataGridCells from './DataGridCells'
 export default function Table(){
 
     const socket = useContext(SocketContext);
-
-    const handleUpdate=(args)=>{ // listener function
-        console.log(args);
+    
+    const [ players, setPlayers ] = useState([]);
+    const handleUpdate=(playerData)=>{ // listener function
+        console.log(playerData);
+        setPlayers((prevState)=>{
+            return [...prevState,playerData]
+        });
     }
     
     useEffect(()=>{
@@ -20,6 +24,8 @@ export default function Table(){
     },[socket]);
     
     return (
-        <h2>Golfers</h2>
-    )
+        <>
+            <DataGridCells data={players} />
+        </>
+    )   
 }
