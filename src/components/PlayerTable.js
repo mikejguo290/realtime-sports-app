@@ -51,6 +51,7 @@ const columns = [
   },
 ];
 
+// would like to know the intention behind the table, the data hierarchy i.e. which parts of the data are important. 
 
 function PlayerTable({rows}) {
   
