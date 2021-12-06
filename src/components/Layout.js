@@ -1,9 +1,9 @@
 import React from 'react';
-import Table from './Table';
+import TableContainer from './TableContainer';
 
 function Layout() {
   return (
-    <Table/>
+    <TableContainer/>
   );
 }
 

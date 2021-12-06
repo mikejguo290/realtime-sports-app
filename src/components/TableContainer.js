@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState }from 'react';
 import { SocketContext } from '../context/socket';
-import Table from './Table'
+import PlayerTable from './PlayerTable'
 export default function TableContainer(){
 
     const socket = useContext(SocketContext);
@@ -29,7 +29,7 @@ export default function TableContainer(){
     
     return (
         <>
-            <Table rows={players} />
+            <PlayerTable rows={players} />
         </>
     )   
 }

@@ -46,12 +46,13 @@ const columns = [
   {
     field: 'CalculatedRankInteger',
     headerName: 'Rank',
+    type: 'number',
     width: 150,
   },
 ];
 
 
-export default function DataGridCells({rows}) {
+function PlayerTable({rows}) {
   
   return (
     <div style={{ height: '100%', width: '100%' }}>
@@ -65,3 +66,4 @@ export default function DataGridCells({rows}) {
     </div>
   );
 }
+export default PlayerTable;
