@@ -3,7 +3,10 @@ import TableContainer from './TableContainer';
 
 function Layout() {
   return (
-    <TableContainer/>
+    <>
+        <h2>Golf Stats</h2>
+        <TableContainer class="tblContainer"/>
+    </>
   );
 }
 
