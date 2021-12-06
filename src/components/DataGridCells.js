@@ -7,26 +7,46 @@ const columns = [
     field: 'First',
     headerName: 'First name',
     width: 150,
-    editable: true,
   },
   {
     field: 'Last',
     headerName: 'Last name',
     width: 150,
-    editable: true,
   },
   {
     field: 'Nationality',
     headerName: 'Nationality',
     width: 150,
-    editable: true,
+  },
+  {
+    field: 'Sex',
+    headerName: 'Gender',
+    width: 150,
+  },
+  {
+    field: 'Handicap',
+    headerName: 'Handicap',
+    width: 150,
+  },
+  {
+    field: 'holesPlayed',
+    headerName: 'Holes Played',
+    width: 150,
+  },
+  {
+    field: 'TotalStrokes',
+    headerName: 'Total Strokes',
+    width: 150,
+  },
+  {
+    field: 'Score',
+    headerName: 'Score',
+    width: 150,
   },
   {
     field: 'CalculatedRankInteger',
     headerName: 'Rank',
-    type: 'number',
     width: 150,
-    editable: true,
   },
 ];
 
