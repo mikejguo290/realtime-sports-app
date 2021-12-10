@@ -13,7 +13,10 @@ export default function TableContainer(){
               id:data.MSTID, // Data grid needs the unique id property to work 
             }
         setPlayers((prevState)=>{
-            return [playerData, ...prevState] // new player data is placed on top of rows.
+            // conditional to deal with duplicate player ids. 
+            if(!prevState.find(player => player.id === playerData.id)){
+                return [playerData, ...prevState] // new player data is placed on top of rows.
+            }
         });
     }
     
