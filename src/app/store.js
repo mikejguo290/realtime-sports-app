@@ -1,5 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import playersReducer from '../features/players/playersSlice';
 
-const reducer = {}
+const rootReducer = {
+    players:playersReducer,
+}
 
-export const store = configureStore(reducer);
+const store = configureStore({reducer: rootReducer });
+
+export default store;
