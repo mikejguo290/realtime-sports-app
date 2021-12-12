@@ -1,6 +1,6 @@
 import React from 'react';
-import {SocketContext, socket} from '../../context/socket'
-import Layout from '../Layout';
+import {SocketContext, socket} from '../context/socket'
+import Layout from '../components/Layout';
 
 function App() {
   return (

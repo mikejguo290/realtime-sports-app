@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState }from 'react';
-import { SocketContext } from '../context/socket';
-import PlayerTable from './PlayerTable'
+import { SocketContext } from '../../context/socket';
+import PlayerTable from '../../components/PlayerTable'
 export default function TableContainer(){
 
     const socket = useContext(SocketContext);
