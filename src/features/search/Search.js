@@ -21,9 +21,8 @@ export function Search (){
 
     return (
         <header>
-          <div></div>
           <form onSubmit={handleSubmit} >
-              <input className="searchBar" type='text' placeholder='Search' value={searchTerm} onChange={handleChange} />
+              <input className="searchBar" type='text' placeholder='Search player' value={searchTerm} onChange={handleChange} />
               {
               searchTerm
                   ?<button className="clearSearch" onClick={handleClick}>X</button>

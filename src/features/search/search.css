@@ -1,34 +1,40 @@
-header {
+
+  header {
+    display: flex;
+    justify-content: center;
     background-color:white;
     /* box shadow offset x, offset y, blur, spread, colour*/
     box-shadow: 0 3px 10px 1px rgb(0 0 0 / 0.2);
     padding: 1rem 0rem;
+    width: 100%;
   }
   
-header form {
-
+  header form {
+    display: flex;
     flex-direction:row;
     border:1px solid grey;
-}
-
-input.searchBar { /* form input */
+    width: 30%;
+    max-width: 700px;
+  }
+  input.searchBar { /* form input */
+    /* Tell the input to use all the available space */
     /* And hide the input's outline, so the form looks like the outline */
     border:0;
-    max-width: 700px;
     align-self: center;
     background-color: #f3f3f3;
-
-}
+    flex-grow:1;
+    line-height: 2em;
+    font-size: 1em;
+  }
   
-input.searchBar:focus {
+  input.searchBar:focus {
     outline:none;
-}
+  }
   
-button.clearSearch{ /* clear search button */
+  button.clearSearch{ /* clear search button */
     border:1px solid #FF5700;
     background:#FF5700;
     color:ghostwhite;
     font-weight:bold;
-}
-  
+  }
   
